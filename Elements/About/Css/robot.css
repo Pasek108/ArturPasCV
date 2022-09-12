@@ -1,0 +1,140 @@
+.robot {
+  position: absolute;
+  top: 0;
+  right: auto;
+  bottom: auto;
+  left: 0;
+  z-index: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+}
+.robot.active {
+  z-index: 1;
+}
+.robot .activator {
+  position: absolute;
+  top: -200px;
+  right: auto;
+  bottom: auto;
+  left: 50vw;
+  z-index: 1;
+  width: 0.5vw;
+  height: 0.5vw;
+  transition: top 120s linear, left 120s linear;
+  cursor: pointer;
+}
+.robot .activator .image {
+  width: 0.5vw;
+  height: 0.5vw;
+  background: url(../../../Images/Robot/robot_idle.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.robot .activator .image.spin-left {
+  animation: spin-left 20s linear infinite;
+}
+@keyframes spin-left {
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+.robot .activator .image.spin-right {
+  animation: spin-right 20s linear infinite;
+}
+@keyframes spin-right {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.robot .message {
+  position: absolute;
+  top: 25vh;
+  right: auto;
+  bottom: auto;
+  left: 20vw;
+  z-index: 100;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 60vw;
+  background-color: #242424;
+  border: 1px solid white;
+  border-radius: 1rem;
+  overflow: hidden;
+  visibility: hidden;
+  opacity: 0;
+  transform: scale(0.75);
+  transition: visibility 0.5s, opacity 0.5s, transform 0.5s;
+}
+.robot .message.active {
+  visibility: visible;
+  opacity: 1;
+  transform: scale(1);
+}
+.robot .message .image-section {
+  position: relative;
+  top: auto;
+  right: auto;
+  bottom: auto;
+  left: auto;
+  z-index: auto;
+  width: 35%;
+  height: 100%;
+}
+.robot .message .image-section .image {
+  position: absolute;
+  top: -7vw;
+  right: auto;
+  bottom: auto;
+  left: calc(50% - 7.5vw);
+  z-index: auto;
+  width: 15vw;
+  height: 15vw;
+  transition: top 2s ease-in;
+}
+.robot .message .image-section .image.idle {
+  background: url(../../..//Images/Robot/robot_idle.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.robot .message .image-section .image.fly {
+  background: url(../../..//Images/Robot/robot_fly.gif);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.robot .text-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #00000080;
+  width: 65%;
+  height: 100%;
+  padding: 3rem 1rem;
+  text-align: center;
+}
+.robot .text-section .text {
+  padding: 2rem;
+  font-size: 1.5rem;
+}
+.robot .text-section .text h4 {
+  padding: 0;
+  margin-top: 0;
+}
+.robot .text-section .close {
+  padding: 0.5rem 2rem;
+  margin: 1rem 0;
+  border: 1px solid white;
+  border-radius: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+.robot .text-section .close:hover {
+  color: #ffbf00;
+}

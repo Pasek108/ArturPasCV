@@ -1,0 +1,96 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  right: auto;
+  bottom: auto;
+  left: 0;
+  z-index: 10;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #393E46;
+  width: 100vw;
+  padding: 0 1rem;
+  box-shadow: 0 0 25px 0 black;
+}
+.navbar .brand {
+  padding: 0.5rem 0;
+}
+.navbar .brand .name {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.navbar .brand .profession {
+  overflow: hidden;
+  height: 1.5rem;
+  transition: 0.25s;
+}
+.navbar .nav-links {
+  position: relative;
+  top: auto;
+  right: auto;
+  bottom: auto;
+  left: auto;
+  z-index: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar .nav-links .nav-indicator {
+  position: absolute;
+  top: 0;
+  right: auto;
+  bottom: auto;
+  left: 0;
+  z-index: auto;
+  content: "";
+  background-color: #cf2626;
+  width: 10rem;
+  height: 2.3rem;
+  padding: 0.4rem 1rem;
+  margin: 0 0.5rem;
+  border-radius: 0.5rem;
+  transition: left 0.5s;
+}
+.navbar .nav-links .nav-link {
+  position: relative;
+  top: auto;
+  right: auto;
+  bottom: auto;
+  left: auto;
+  z-index: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 10rem;
+  padding: 0.4rem 1rem;
+  margin: 0 0.5rem;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  transition: background-color 0.1s;
+  cursor: pointer;
+}
+.navbar .nav-links .nav-link::before {
+  content: "";
+  position: absolute;
+  top: auto;
+  right: auto;
+  bottom: 0;
+  left: 1rem;
+  z-index: 1;
+  height: 2px;
+  width: 0;
+  background-color: white;
+  border-radius: 0.5rem;
+  transition: width 0.5s;
+}
+.navbar .nav-links .nav-link:hover::before {
+  width: 8rem;
+  background-color: white;
+}
+.navbar .nav-links .nav-link i {
+  margin-right: 0.5rem;
+}

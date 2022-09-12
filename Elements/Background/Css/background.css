@@ -1,0 +1,19 @@
+.background {
+  position: fixed;
+  top: 0;
+  right: auto;
+  bottom: auto;
+  left: 0;
+  z-index: -1;
+  background: radial-gradient(circle at bottom, #111833 0%, #0a0b10 100%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  height: 100vh;
+  opacity: 1;
+  visibility: visible;
+}
+.background canvas {
+  transition: transform 1s;
+}

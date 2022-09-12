@@ -1,0 +1,141 @@
+.contact {
+  position: absolute;
+  top: 0;
+  right: auto;
+  bottom: auto;
+  left: 200vw;
+  z-index: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100vw;
+  min-height: 100vh;
+  padding: 7rem 5vw 2rem 5vw;
+  visibility: hidden;
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+  transition: visibility 0.5s, opacity 0.5s, transform 1s;
+}
+.contact.active {
+  visibility: visible;
+  opacity: 1;
+  height: unset;
+  overflow: unset;
+}
+.contact .info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 30%;
+  height: 79vh;
+}
+.contact .info .card {
+  position: relative;
+  top: auto;
+  right: auto;
+  bottom: auto;
+  left: auto;
+  z-index: 0;
+  background-color: #393E46;
+  width: 100%;
+  height: fit-content;
+  padding: 1.5rem;
+  border: 0.4vw solid #ffbf00;
+  border-radius: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  color: whitesmoke;
+  overflow: hidden;
+}
+.contact .info .card::before {
+  content: "";
+  position: absolute;
+  top: 0%;
+  right: auto;
+  bottom: auto;
+  left: 40%;
+  z-index: -1;
+  background-color: #222831;
+  width: 10rem;
+  height: 200%;
+  transform: rotate(40deg);
+}
+.contact .info .card header {
+  margin-bottom: 2rem;
+}
+.contact .info .card header .name {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ffbf00;
+}
+.contact .info .card header .profession {
+  font-weight: bold;
+}
+.contact .info .card .personal-info .title {
+  font-weight: bold;
+  color: #ffbf00;
+  margin-top: 0.5rem;
+}
+.contact .message-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 65%;
+  height: 79vh;
+}
+.contact .message-form form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+.contact .message-form form input {
+  background-color: #00000080;
+  width: 80%;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid white;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  color: white;
+}
+.contact .message-form form textarea {
+  background-color: #00000080;
+  width: 80%;
+  height: 40%;
+  padding: 1rem;
+  border: 1px solid white;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  color: white;
+}
+.contact .message-form form .section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+}
+.contact .message-form form .section input {
+  width: 49%;
+}
+.contact .message-form form button {
+  background-color: #1a71e4;
+  width: 80%;
+  padding: 0.75rem 3rem;
+  margin-top: 1rem;
+  border: 1px solid white;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+}
+.contact .message-form form button:hover {
+  text-decoration: underline;
+}
