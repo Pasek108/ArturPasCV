@@ -1,0 +1,473 @@
+.projects {
+  position: absolute;
+  top: 0;
+  right: auto;
+  bottom: auto;
+  left: 100vw;
+  z-index: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 100vw;
+  height: 100vh;
+  padding: 7rem 5vw 2rem 5vw;
+  visibility: hidden;
+  opacity: 0;
+  overflow: hidden;
+  -webkit-transition: visibility 0.5s, opacity 0.5s, height 1s, -webkit-transform 1s;
+  transition: visibility 0.5s, opacity 0.5s, height 1s, -webkit-transform 1s;
+  transition: visibility 0.5s, opacity 0.5s, transform 1s, height 1s;
+  transition: visibility 0.5s, opacity 0.5s, transform 1s, height 1s, -webkit-transform 1s;
+}
+.projects.active {
+  visibility: visible;
+  opacity: 1;
+  height: 100vh;
+  overflow-y: scroll;
+}
+.projects > header {
+  width: 100%;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+.projects > header .title {
+  font-size: 3rem;
+  font-weight: bold;
+}
+.projects > header .skills {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  margin-top: 2rem;
+}
+.projects > header .skills .languages {
+  position: relative;
+  top: auto;
+  right: auto;
+  bottom: auto;
+  left: auto;
+  z-index: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 1rem;
+}
+.projects > header .skills .languages .indicator {
+  position: absolute;
+  top: 0;
+  right: auto;
+  bottom: auto;
+  left: 0;
+  z-index: -1;
+  min-width: 8rem;
+  padding: 0.5rem 1rem;
+  background-color: #212c55;
+  -webkit-transition: left 0.5s;
+  transition: left 0.5s;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.projects > header .skills .languages .lang-name {
+  min-width: 8rem;
+  padding: 0.5rem 1rem;
+  border-left: 1px solid white;
+  font-weight: bold;
+  cursor: pointer;
+}
+.projects > header .skills .languages .lang-name:last-child {
+  border-right: 1px solid white;
+}
+.projects > header .skills .skills-group {
+  width: 100%;
+  padding: 0 1rem;
+  margin-top: 0.5rem;
+  display: none;
+}
+.projects > header .skills .skills-group.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.projects > header .skills .skills-group .skill {
+  padding: 0.25rem 1rem;
+  margin: 0.5rem;
+  border: 1px solid white;
+  border-radius: 5rem;
+  background-color: #414141;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+  -webkit-transition: background-color 0.25s;
+  transition: background-color 0.25s;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.projects > header .skills .skills-group .skill:hover {
+  background-color: #242424;
+}
+.projects > header .skills .skills-group .skill.active {
+  background-color: #001233;
+}
+.projects .divider {
+  position: relative;
+  top: auto;
+  right: auto;
+  bottom: auto;
+  left: auto;
+  z-index: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 4rem;
+  margin-bottom: 3rem;
+}
+.projects .divider .title {
+  position: relative;
+  top: 0;
+  right: auto;
+  bottom: auto;
+  left: 0;
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #222831;
+  height: 2.1rem;
+  padding: 0 1rem;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  font-weight: bold;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.projects .divider .title::before,
+.projects .divider .title::after {
+  content: "";
+  display: inline-block;
+  background-color: #222831;
+  width: 1.415rem;
+  height: 1.415rem;
+  border-top: 1px solid white;
+}
+.projects .divider .title::before {
+  position: absolute;
+  top: -1px;
+  right: auto;
+  bottom: auto;
+  left: -1.45rem;
+  z-index: -1;
+  border-left: 1px solid white;
+  -webkit-transform-origin: top right;
+          transform-origin: top right;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+.projects .divider .title::after {
+  position: absolute;
+  top: -1px;
+  right: -1.46rem;
+  bottom: auto;
+  left: auto;
+  z-index: -1;
+  border-right: 1px solid white;
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.projects .divider hr {
+  position: absolute;
+  top: auto;
+  right: auto;
+  bottom: auto;
+  left: auto;
+  z-index: auto;
+  background-color: unset;
+  width: 100%;
+  height: 0;
+  margin: 0;
+  opacity: 1;
+  border: none;
+  border-top: 1px solid white;
+}
+.projects .projects-group {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 40vw 3vw 40vw;
+  grid-template-columns: repeat(2, 40vw);
+  -webkit-column-gap: 3vw;
+     -moz-column-gap: 3vw;
+          column-gap: 3vw;
+  row-gap: 3vw;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 4rem;
+}
+.projects .projects-group.empty {
+  min-height: 50vh;
+}
+.projects .project {
+  background-color: #272e38;
+  width: 40vw;
+  min-width: 300px;
+  max-width: 90vw;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.projects .project:hover .image {
+  background-size: 120%;
+}
+.projects .project:hover .image::before {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.projects .project:hover .image .git-link {
+  visibility: visible;
+  opacity: 1;
+}
+.projects .project .image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #242424;
+  width: 100%;
+  height: 15vw;
+  background-image: var(--bg-image);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  -webkit-transition: background-size 0.75s;
+  transition: background-size 0.75s;
+}
+.projects .project .image::before {
+  content: "";
+  position: absolute;
+  top: auto;
+  right: auto;
+  bottom: auto;
+  left: auto;
+  z-index: auto;
+  display: inline-block;
+  width: 40vw;
+  height: 15vw;
+  min-width: 300px;
+  max-width: 90vw;
+  background-color: #00000000;
+  -webkit-transition: background-color 0.75s;
+  transition: background-color 0.75s;
+}
+.projects .project .image .git-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  top: auto;
+  right: auto;
+  bottom: auto;
+  left: auto;
+  z-index: auto;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0.5rem 1rem;
+  border: 3px solid whitesmoke;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: visibility 0.75s, opacity 0.75s, background-color 0.1s;
+  transition: visibility 0.75s, opacity 0.75s, background-color 0.1s;
+  color: white;
+  cursor: pointer;
+}
+.projects .project .image .git-link:hover {
+  text-decoration: none;
+}
+.projects .project .image .git-link::after {
+  font-family: "Font Awesome 6 Brands";
+  content: "\f09b";
+  margin-left: 0.75rem;
+  font-size: 1.5rem;
+}
+.projects .project .info {
+  width: 100%;
+  padding: 1rem;
+}
+.projects .project .info header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.projects .project .info header .title {
+  display: inline-block;
+  font-size: 1.2rem;
+}
+.projects .project .info header .skills {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+.projects .project .info header .skills .skill {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 5rem;
+  padding: 0.25rem 0.5rem;
+  margin-left: 0.5rem;
+  border: 1px solid whitesmoke;
+  border-radius: 1rem;
+  font-size: 0.75rem;
+}
+.projects .project .info .description {
+  height: 3rem;
+  margin: 1rem 0;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+}
+@media only screen and (max-width: 850px) {
+  .projects-group {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (40vw)[1] !important;
+    grid-template-columns: repeat(1, 40vw) !important;
+  }
+  .projects-group .project {
+    width: 90vw !important;
+    min-width: 300px;
+    max-width: 90vw;
+  }
+  .projects-group .image {
+    height: 30vw !important;
+  }
+  .projects-group .image::before {
+    width: 90vw !important;
+    height: 30vw !important;
+    min-width: 300px;
+    max-width: 90vw;
+  }
+}

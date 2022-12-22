@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Artur Pas</title>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="./Styles/Css/style.css" />
+    <link rel="stylesheet" href="./Styles/Css/navbar.css" />
+    <link rel="stylesheet" href="./Styles/Css/about.css" />
+    <link rel="stylesheet" href="./Styles/Css/projects.css" />
+    <link rel="stylesheet" href="./Styles/Css/contact.css" />
+  </head>
+
+  <body lang="pl">
+    <header class="navbar">
+      <div class="brand">
+        <div class="name">
+          <span>Artur Pas</span>
+
+          <div class="lang">
+            <div class="selector">
+              <div class="choosen-lang pl"></div>
+              <i class="fa-solid fa-angle-down"></i>
+            </div>
+
+            <div class="options">
+              <div class="option" data-lang="pl">
+                <img src="./Images/pl.png" alt="polish_flag" />
+                <span>PL</span>
+              </div>
+              <div class="option" data-lang="en">
+                <img src="./Images/en.png" alt="english_american_flag" />
+                <span>EN</span>
+              </div>
+              <div class="option" data-lang="es">
+                <img src="./Images/es.png" alt="spanish_flag" />
+                <span>ES</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="profession">Junior front-end developer</div>
+      </div>
+
+      <nav class="links">
+        <div class="indicator"></div>
+        <div class="link active" data-id="0"><i class="fa-solid fa-user"></i> O mnie</div>
+        <div class="link" data-id="1"><i class="fa-solid fa-folder"></i> Projekty</div>
+        <div class="link" data-id="2"><i class="fas fa-envelope"></i> Kontakt</div>
+      </nav>
+
+      <div class="grid"></div>
+      <div class="nav-bg"></div>
+    </header>
+
+    <div class="background">
+      <canvas></canvas>
+    </div>
+
+    <div class="view about active">
+      <div class="robot">
+        <div class="activator">
+          <div class="image spin-left"></div>
+        </div>
+
+        <div class="message">
+          <div class="image-section">
+            <div class="image idle"></div>
+          </div>
+
+          <div class="text-section">
+            <div class="text">
+              <h4>Dziękuję że mnie znalazłeś ＼(&nbsp;^▽^&nbsp;)／</h4>
+              Chciałem ci tylko powiedzieć że jesteś niesamowitym stworzeniem i że cię kocham, nie zmieniaj się.
+            </div>
+            <div class="close">Zamknij</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="profile-section">
+        <div class="profile">
+          <div class="click-me">Kliknij mnie!</div>
+        </div>
+
+        <div class="links-menu">
+          <div class="link">
+            <div class="icon-wrapper"><i class="fa-brands fa-linkedin"></i></div>
+            <a href="https://www.linkedin.com/in/artur-pas/" target="_blank">Otwórz Linkedin</a>
+          </div>
+          <div class="link">
+            <div class="icon-wrapper"><i class="fas fa-file-pdf"></i></div>
+            <a href="./Resume/Artur Pas_PL.pdf" target="_blank">Otwórz CV</a>
+          </div>
+          <div class="link">
+            <div class="icon-wrapper"><i class="fa-brands fa-codepen"></i></div>
+            <a href="https://codepen.io" target="_blank">Otwórz Codepen</a>
+          </div>
+          <div class="link">
+            <div class="icon-wrapper"><i class="fab fa-github"></i></div>
+            <a href="https://github.com/Pasek108" target="_blank">Otwórz Github</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-carousel">
+        <div class="prev"><i class="fa-solid fa-chevron-left"></i></div>
+        <div class="next"><i class="fa-solid fa-chevron-right"></i></div>
+
+        <div class="text active">
+          <h3>Kim jestem?</h3>
+          <p>Nazywam się Artur Pas, jestem początkującym front-end developerem, na chwilę obecną nie posiadam żadnego doświadczenia komercyjnego</p>
+        </div>
+        <div class="text">
+          <h3>Wykształcenie</h3>
+          <p>Ukończyłem technikum informatyczne, obecnie jestem studentem drugiego roku informatyki na Uniwersytecie Rzeszowskim</p>
+        </div>
+        <div class="text">
+          <h3>Czym się zajmuję?</h3>
+          <p>W wolnym czasie zajmuję się programowaniem, graniem, nauką języków na duolingo oraz rozwojem kultury fizycznej</p>
+        </div>
+        <div class="text">
+          <h3>W czym piszę?</h3>
+          <p>Do programowania używam Visual Studio Code, Prepros oraz XAMPP</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="view projects">
+      <header>
+        <div class="title">Projekty</div>
+        <div class="hint">Kliknij umiejętność aby wyświetlić odpowiednie projekty</div>
+
+        <div class="skills">
+          <div class="languages">
+            <div class="indicator">&nbsp</div>
+            <div class="lang-name active" data-id="0">JavaScript</div>
+            <div class="lang-name" data-id="1">Java</div>
+            <div class="lang-name" data-id="2">PHP</div>
+            <div class="lang-name" data-id="3">Python</div>
+            <div class="lang-name" data-id="4">Inne</div>
+          </div>
+
+          <div class="skills-group active">
+            <div class="skill" data-id="1">React</div>
+            <div class="skill" data-id="1">Angular</div>
+            <div class="skill" data-id="2">Node.js</div>
+            <div class="skill" data-id="3">MySQL</div>
+            <div class="skill" data-id="3">MongoDB</div>
+            <div class="skill" data-id="4">Pixi.js</div>
+            <div class="skill" data-id="5">CSS</div>
+            <div class="skill" data-id="5">LESS</div>
+          </div>
+
+          <div class="skills-group">
+            <div class="skill" data-id="1">Swing</div>
+            <div class="skill" data-id="1">JavaFX</div>
+            <div class="skill" data-id="2">JDBC</div>
+            <div class="skill" data-id="3">MySQL</div>
+            <div class="skill" data-id="3">MongoDB</div>
+          </div>
+
+          <div class="skills-group">
+            <div class="skill" data-id="1">WordPress</div>
+            <div class="skill" data-id="2">MySQL</div>
+            <div class="skill" data-id="2">MongoDB</div>
+          </div>
+
+          <div class="skills-group">
+            <div class="skill" data-id="1">Tkinter</div>
+            <div class="skill" data-id="2">Pygame</div>
+            <div class="skill" data-id="3">Flask</div>
+          </div>
+
+          <div class="skills-group">
+            <div class="skill" data-id="1">GDevelop</div>
+            <div class="skill" data-id="2">Scratch</div>
+            <div class="skill" data-id="3">BeFunge</div>
+          </div>
+        </div>
+      </header>
+
+      <div class="divider">
+        <div class="title">JavaScript</div>
+        <hr />
+      </div>
+
+      <div class="projects-group empty"></div>
+    </div>
+
+    <div class="view contact">
+      <div class="info">
+        <section>
+          <i class="fa-solid fa-map-location-dot"></i>
+          Kolbuszowa / Rzeszów
+        </section>
+
+        <section>
+          <i class="fa-solid fa-phone"></i>
+          +48 727 763 000
+        </section>
+
+        <section>
+          <i class="fa-solid fa-envelope"></i>
+          pasartur108@gmail.com
+        </section>
+
+        <section>
+          <i class="fa-brands fa-linkedin"></i>
+          <a href="https://www.linkedin.com/in/artur-pas/" target="_blank">linkedin/artur-pas</a>
+        </section>
+      </div>
+
+      <div class="message-form">
+        <form action="">
+          <div class="section">
+            <input type="text" class="name" placeholder="Imię" />
+            <input type="email" class="email" placeholder="E-mail" />
+          </div>
+
+          <input type="text" class="topic" placeholder="Temat" required />
+          <textarea name="" id="" cols="30" rows="10" class="text" placeholder="Wiadomość" required></textarea>
+          <button class="send">Wyślij wiadomość <i class="fas fa-paper-plane"></i></button>
+        </form>
+      </div>
+    </div>
+
+    <div class="game"></div>
+
+    <script src="https://pixijs.download/v6.5.1/pixi.min.js"></script>
+    <script src="./Scripts/script.js"></script>
+    <script src="./Scripts/background.js"></script>
+    <script src="./Scripts/navbar.js"></script>
+    <script src="./Scripts/about.js"></script>
+    <script src="./Scripts/robot.js"></script>
+    <script src="./Scripts/projects_data.js"></script>
+    <script src="./Scripts/projects.js"></script>
+    <script src="./Scripts/contact.js"></script>
+    <script src="./Scripts/Platform.js"></script>
+    <!--<script src="./Scripts/game.js"></script>-->
+  </body>
+</html>

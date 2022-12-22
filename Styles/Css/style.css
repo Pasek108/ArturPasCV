@@ -1,0 +1,98 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body {
+  scroll-behavior: smooth;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: auto;
+  left: auto;
+  z-index: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100vw;
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto";
+  color: white;
+  line-height: 1.5;
+}
+body::-webkit-scrollbar {
+  display: initial;
+  width: 0;
+  height: 0;
+  padding: 0;
+  cursor: pointer;
+}
+body[lang="pl"] .en,
+body[lang="pl"] .es,
+body[lang="en"] .pl,
+body[lang="en"] .es,
+body[lang="es"] .pl,
+body[lang="es"] .en {
+  display: none;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+.disclaimer,
+a img {
+  display: none;
+}
+a {
+  display: inline-block;
+  font-weight: bold;
+  color: #ffbf00;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+a::after {
+  font-family: "Font Awesome 6 Free";
+  content: "\f0c1";
+  margin-left: 0.5rem;
+}
+.background {
+  position: fixed;
+  top: 0;
+  right: auto;
+  bottom: auto;
+  left: 0;
+  z-index: -1;
+  background: radial-gradient(circle at bottom, #111833 0%, #0a0b10 100%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  height: 100vh;
+  opacity: 1;
+  visibility: visible;
+}
+.background canvas {
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+  background-color: #00000000;
+}
+.game {
+  display: none;
+}

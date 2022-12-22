@@ -1,0 +1,87 @@
+@import url(./helper_classes.less);
+
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    scroll-behavior: smooth;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+
+    .position(fixed, 0, 0);
+    .flex(column, center, center);
+    width: 100vw;
+    padding: 0;
+    margin: 0;
+    font-family: "Roboto";
+    color: white;
+    line-height: 1.5;
+
+    &::-webkit-scrollbar {
+        display: initial;
+        width: 0;
+        height: 0;
+        padding: 0;
+        cursor: pointer;
+    }
+}
+
+body[lang="pl"] .en,
+body[lang="pl"] .es,
+body[lang="en"] .pl,
+body[lang="en"] .es,
+body[lang="es"] .pl,
+body[lang="es"] .en {
+    display: none;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.disclaimer,
+a img {
+    display: none;
+}
+
+a {
+    display: inline-block;
+    font-weight: bold;
+    color: #ffbf00;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+
+    &::after {
+        font-family: "Font Awesome 6 Free";
+        content: "\f0c1";
+        margin-left: 0.5rem;
+    }
+}
+
+.background {
+    .position(fixed, 0, @left: 0, @zindex: -1);
+    background: radial-gradient(circle at bottom, rgb(17, 24, 51) 0%, rgb(10, 11, 16) 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    height: 100vh;
+    opacity: 1;
+    visibility: visible;
+
+    canvas {
+
+        transition: transform 1s;
+        background-color: #00000000;
+    }
+}
+
+.game {
+    display: none;
+}
