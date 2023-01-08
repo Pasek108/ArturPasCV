@@ -1,5 +1,8 @@
 "use strict";
 
+const open_game = document.querySelector(".profile");
+open_game.addEventListener("click", () => alert("Sorry, this function is not yet complete :("));
+
 /* ------------ changing text about me ------------ */
 const prev = document.querySelector(".prev");
 const next = document.querySelector(".next");

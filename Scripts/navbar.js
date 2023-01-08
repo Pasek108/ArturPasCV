@@ -52,6 +52,7 @@ class Navbar {
   }
 
   toggleOption(evt) {
+    Navbar.profession.style.height = null;
     const option_id = evt.currentTarget.dataset.id;
     this.indicator.style.left = `${option_id * 11}rem`;
 

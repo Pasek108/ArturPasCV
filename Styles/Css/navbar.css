@@ -180,7 +180,7 @@
           transform: rotate(180deg);
 }
 .navbar .lang.active .options {
-  height: 7rem;
+  height: 4.75rem;
   padding-top: 0.75rem;
 }
 .links {

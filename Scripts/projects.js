@@ -8,6 +8,7 @@ class Projects {
       else Navbar.profession.style.height = null;
     });
 
+    /*
     this.languages = this.container.querySelectorAll(".lang-name");
     for (let i = 0; i < this.languages.length; i++) {
       this.languages[i].addEventListener("click", this.toggleSkillGroup.bind(this));
@@ -24,8 +25,10 @@ class Projects {
     }
 
     this.divider_title = this.container.querySelector(".divider .title");
+    
+    this.addProjects(this.active_skills);*/
     this.projects_group = this.container.querySelector(".projects-group");
-    this.addProjects(this.active_skills);
+    this.addAllProjects(this.active_skills)
   }
 
   toggleSkillGroup(evt) {
@@ -91,6 +94,15 @@ class Projects {
       }
 
       if (!have_active_skill) continue;
+      new Project(projects_data[i], this.projects_group);
+    }
+  }
+
+  addAllProjects() {
+    this.projects_group.classList.remove("empty");
+    this.projects_group.innerHTML = "";
+
+    for (let i = 0; i < projects_data.length; i++) {
       new Project(projects_data[i], this.projects_group);
     }
   }
